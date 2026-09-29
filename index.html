@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yashwanth GJ | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #334155;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        radial-gradient(circle at top right, #164e63, transparent 35%),
+        radial-gradient(circle at bottom left, #1e3a8a, transparent 35%),
+        #0f172a;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 80px);
+      margin-bottom: 10px;
+    }
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+    .hero h2 {
+      color: #cbd5e1;
+      font-size: 25px;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    .hero p {
+      color: #94a3b8;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #7dd3fc;
+      transform: translateY(-3px);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 45px;
+      color: #38bdf8;
+    }
+
+    /* About */
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 18px;
+    }
+
+    /* Education */
+    .education {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid #334155;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #38bdf8;
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.12);
+    }
+
+    .card .number {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #38bdf8;
+      color: #0f172a;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .card h3 {
+      color: #f8fafc;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #94a3b8;
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+      background: #020617;
+    }
+
+    .contact p {
+      color: #94a3b8;
+      margin-bottom: 25px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #020617;
+      border-top: 1px solid #1e293b;
+      color: #64748b;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        padding: 15px 5%;
+      }
+
+      nav ul {
+        gap: 12px;
+        font-size: 14px;
+      }
+
+      .education {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">YGJ.</div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Yashwanth GJ</span></h1>
+
+      <h2>Computer Science Engineering Student</h2>
+
+      <p>
+        Welcome to my personal portfolio. I am a Computer Science Engineering
+        student passionate about technology, learning and building new things.
+      </p>
+
+      <a href="#education" class="btn">View My Education</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+      <p>
+        I'm <strong>Yashwanth GJ</strong>, a Computer Science Engineering student
+        at Jain College, Davanagere. I completed my schooling at Sri Siddaganga
+        School and my pre-university education at Sri Chaitanya PU College.
+        I am interested in exploring the world of computer science and
+        continuously improving my technical skills.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2 class="section-title">My Education</h2>
+
+    <div class="education">
+
+      <div class="card">
+        <div class="number">01</div>
+        <h3>10th Standard</h3>
+        <p>Sri Siddaganga School</p>
+      </div>
+
+      <div class="card">
+        <div class="number">02</div>
+        <h3>12th Standard</h3>
+        <p>Sri Chaitanya PU College</p>
+      </div>
+
+      <div class="card">
+        <div class="number">03</div>
+        <h3>Computer Science Engineering</h3>
+        <p>Jain College, Davanagere</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+
+    <p>
+      Interested in connecting with me? Feel free to reach out.
+    </p>
+
+    <a href="mailto:your-email@example.com" class="btn">
+      Contact Me
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Yashwanth GJ. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
